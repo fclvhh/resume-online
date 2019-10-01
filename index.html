@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Resume-Online</title>
+  <!-- 清除默认样式 -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    /* 
+      top-navbar 布局: =(nav+logo)
+          1. flex布局实现导航条
+          2. flex布局实现导航栏
+     */
+    /* 导航条 */
+    .head>.top-navbar>.nav>ul {
+      width: 780px;
+      display: flex;
+      justify-content: space-around;
+    }
+    /* 网站logo */
+    .logo {
+      text-align: center;
+      line-height: 50px;
+    }
+
+    /* 实现导航栏布局 */
+    .head>.top-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 35px;
+    }
+
+    /* 微调各个items */
+    .logo {
+      margin-left: 15px;
+    }
+
+    .head>.top-navbar>.nav {
+      margin-right: 155px;
+    }
+
+    /* 开始写样式 */
+    .head>.top-navbar>.nav>ul>li>a {
+      font-size: 13px;
+      color: #cbcacb;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      display: block;
+      margin: 
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="head">
+      <div class="top-navbar">
+        <div class="logo">
+          <a href="#">
+            <span>RS</span>card
+          </a>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li><a href="#">关&nbsp;于</a></li>
+            <li><a href="#">技&nbsp;能</a></li>
+            <li><a href="#">作&nbsp;品&nbsp;集</a></li>
+            <li><a href="#">工&nbsp;作&nbsp;经&nbsp;验&nbsp;</a></li>
+            <li><a href="#">价&nbsp;格</a></li>
+            <li><a href="#">博&nbsp;客</a></li>
+            <li><a href="#">日&nbsp;期</a></li>
+            <li><a href="#">联&nbsp;系&nbsp;方&nbsp;式</a></li>
+            <li><a href="#">其&nbsp;他</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+</body>
+
+</html>
