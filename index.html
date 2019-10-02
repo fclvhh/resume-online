@@ -8,7 +8,23 @@
   <title>Resume-Online</title>
   <!-- 清除默认样式 -->
   <link rel="stylesheet" href="./css/reset.css">
+  <!-- hover特效 -->
+  <link href="css/hover.css" rel="stylesheet" media="all">
+  <script src="//at.alicdn.com/t/font_1346652_d39dix9tdt5.js"></script>
+  <style type="text/css">
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+  </style>
   <style>
+    body {
+      background-color: #efefef;
+    }
+
     /* 
       top-navbar 布局: =(nav+logo)
           1. flex布局实现导航条
@@ -20,6 +36,7 @@
       display: flex;
       justify-content: space-around;
     }
+
     /* 网站logo */
     .logo {
       text-align: center;
@@ -51,9 +68,240 @@
       line-height: 1;
       text-transform: uppercase;
       display: block;
-      margin: 
-      
+      padding: 13px 0px;
     }
+
+    .logo span {
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-right: 3px;
+      color: #e8676b;
+    }
+
+    .logo a {
+      color: #9a9da2;
+      display: block;
+      font-family: fantasy;
+    }
+
+    /* 写鼠标悬停效果--用hover插件 */
+    /* 背景图片 */
+    .banner {
+      height: 515px;
+      background-image: url(./img/rs-cover.jpg);
+      background-position: center center;
+      background-size: cover;
+
+    }
+
+    .banner .mask {
+      height: 515px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* 让背景图片实现预期效果 */
+    .top-navbar {
+      position: fixed;
+      width: 100%;
+    }
+
+    /* 开始main布局 */
+    /* 
+    第一章节布局:
+    这次是先写完结构,然后从里面往外面一边写样式一边布局!
+   */
+    /* 个人信息的布局 */
+
+    main>.section-one ul {
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    main>.section-one ul span {
+      width: 350px;
+    }
+
+    main>.section-one ul strong {
+      width: 120px;
+    }
+
+    main>.section-one ul li {
+      width: 470px;
+      height: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+    }
+
+    /* 头像布局 */
+    .top-photo img {
+      width: 295px;
+      height: 342px;
+    }
+
+    /* box-top布局 */
+    /* 直接给box一个宽度 */
+    .section-one .box {
+      width: 930px;
+      background-color: white;
+    }
+
+    .section-one .box-top {
+      width: 930px;
+      height: 445px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    /* box-bottom布局 */
+    .section-one .box-bottom {
+      background: #e8676b;
+    }
+
+    .section-one .box-bottom>.bottom-nav {
+      width: 930px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-one .box-bottom>.bottom-nav ul {
+      width: 460px;
+      height: 85px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    /* 第一节整体居中 */
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 调整图标大小 */
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .section-one .box-bottom>.bottom-nav ul a {
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      line-height: 40px;
+    }
+
+
+    .section-one .box-bottom>.bottom-nav ul a:hover {
+
+      border-radius: 50%;
+      background-color: #d05c60;
+    }
+
+    /* 写结尾部分 */
+    .other {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .other .downloadResume-wrapper {
+      width: 280px;
+      height: 60px;
+      border: 1px grey solid;
+      background-color: #efefef;
+      margin-top: 36px;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bolder;
+      background-color: #ffffff;
+      -moz-box-shadow: 0px 4px 9px #333333;
+      -webkit-box-shadow: 0px 4px 9px #333333;
+      box-shadow: 0px 4px 9px #333333;
+    }
+
+    .other .downloadResume-wrapper a {
+      color: black;
+    }
+
+    .selfIntroduction {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    /* 开始第二章节--skills  */
+    /* 首先调整两个章节,满足布局需求 */
+    main {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    main .skills {
+      margin-top: 80px;
+    }
+
+    main .skills h1 {
+      font-size: 35px;
+      font-weight: bolder;
+    }
+
+    /* 写技能条 */
+    .outer {
+      width: 400px;
+      height: 5px;
+      background: #fae1e1;
+      border-radius: 50px;
+    }
+    .inner {
+      width: 400px;
+      height: 5px;
+      background: red;
+      border-radius: 50px;
+    }
+
+    /* 写小卡片 */
+    .box-wrap {
+      width: 930px;
+      height: 245px;
+      border: 1px transparent solid;
+      background-color: #ffffff;
+      -moz-box-shadow: 0px 4px 9px #333333;
+      -webkit-box-shadow: 0px 4px 9px #333333;
+      box-shadow: 0px 4px 9px #333333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* 开始布局skills */
+    .box-wrap  li{
+      width: 400px;
+      height: 25px;
+    }
+    .box-wrap ul{
+      height: 160px;
+      width: 835px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .skills {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .skills h1 {
+      margin-bottom: 30px;
+    }
+    
   </style>
 </head>
 
@@ -68,19 +316,186 @@
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="#">关&nbsp;于</a></li>
-            <li><a href="#">技&nbsp;能</a></li>
-            <li><a href="#">作&nbsp;品&nbsp;集</a></li>
-            <li><a href="#">工&nbsp;作&nbsp;经&nbsp;验&nbsp;</a></li>
-            <li><a href="#">价&nbsp;格</a></li>
-            <li><a href="#">博&nbsp;客</a></li>
-            <li><a href="#">日&nbsp;期</a></li>
-            <li><a href="#">联&nbsp;系&nbsp;方&nbsp;式</a></li>
-            <li><a href="#">其&nbsp;他</a></li>
+            <li class="hvr-underline-reveal"><a href="#">关&nbsp;于</a></li>
+            <li class="hvr-underline-reveal"><a href="#">技&nbsp;能</a></lic>
+            <li class="hvr-underline-reveal"><a href="#">作&nbsp;品&nbsp;集</a></li>
+            <li class="hvr-underline-reveal"><a href="#">工&nbsp;作&nbsp;经&nbsp;验&nbsp;</a></li>
+            <li class="hvr-underline-reveal"><a href="#">价&nbsp;格</a></li>
+            <li class="hvr-underline-reveal"><a href="#">博&nbsp;客</a></li>
+            <li class="hvr-underline-reveal"><a href="#">日&nbsp;期</a></li>
+            <li class="hvr-underline-reveal"><a href="#">联&nbsp;系&nbsp;方&nbsp;式</a></li>
+            <li class="hvr-underline-reveal"><a href="#">其&nbsp;他</a></li>
           </ul>
         </nav>
       </div>
+      <div class="banner">
+        <!-- 背景图片的遮罩,让背景图片实现一些效果:如半透明啊 -->
+        <div class="mask"></div>
+      </div>
     </header>
+    <main style="margin-top:-320px;">
+      <section class="section-one">
+        <div class="box">
+          <div class="box-top">
+            <div class="top-photo">
+              <img src="./img/avatar.png" alt="头像">
+            </div>
+            <div class="top-info">
+              <h1>我是
+                <strong>FC-ccccccc</strong>
+              </h1>
+              <h3>
+                前端开发工程师
+              </h3>
+              <br><br>
+              <hr><br>
+
+              <ul class="info-list">
+                <li><strong>年龄</strong><span>24</span></li>
+                <li><strong>地址</strong><span>安徽省合肥市</span></li>
+                <li><strong>E-MALL</strong><span>xxx@qq.com</span></li>
+                <li><strong>联系方式</strong><span>1111111111111</span></li>
+                <li><strong>生日</strong><span>11月1号</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box-bottom">
+            <div class="bottom-nav">
+              <ul>
+                <li><a href="">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-csdn"></use>
+                    </svg>
+                  </a></li>
+                <li><a href="">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-github1"></use>
+                    </svg>
+                  </a></li>
+                <li><a href="">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-juejin"></use>
+                    </svg>
+                  </a></li>
+                <li><a href="">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-zhihu1"></use>
+                    </svg>
+                  </a></li>
+                <li><a href="">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-weibo"></use>
+                    </svg>
+                  </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="other ">
+          <p class="downloadResume-wrapper hvr-float ">
+            <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
+          </p>
+          <p class="selfIntroduction">
+            费城， 初级前端工程师 喜欢唱跳rap 篮球!
+            <br> <br>技能：web前端 node.js
+          </p>
+        </div>
+      </section>
+      <section class="skills">
+        <h1>我的技能</h1>
+        <div class="box-wrap">
+            <ul style="list-style: none;">
+              <li>HTML和CSS
+                <div class="outer" >
+                  <div class="inner" style="width: 60%;"></div>
+                </div>
+              </li>
+              <li>jQuery
+                <div class="outer">
+                  <div class="inner" style="width: 60%;"></div>
+                </div>
+              </li>
+              <li>Vue
+                <div class="outer" >
+                  <div class="inner" style="width:70%;"></div>
+                </div>
+              </li>
+              <li>AJAX
+                <div class="outer" >
+                  <div class="inner" style="width: 10%" ></div>
+                </div>
+              </li>
+              <li>Node.js
+                  <div class="outer" >
+                    <div class="inner" style="width:70%;"></div>
+                  </div>
+                </li>
+              <li>JavaScript
+                  <div class="outer" >
+                    <div class="inner" style="width: 10%" ></div>
+                  </div>
+              </li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="section-demo">
+        <div class="demo-wrap">
+
+        </div>
+      </section>
+    </main>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
+    <p>hhhha</p>
   </div>
 </body>
 
