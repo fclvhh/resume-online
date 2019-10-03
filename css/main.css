@@ -1,0 +1,336 @@
+body {
+    background-color: #efefef;
+}
+
+
+/* 
+      top-navbar 布局: =(nav+logo)
+          1. flex布局实现导航条
+          2. flex布局实现导航栏
+     */
+
+
+/* 导航条 */
+
+.head>.top-navbar>.nav>ul {
+    width: 780px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* 网站logo */
+
+.logo {
+    text-align: center;
+    line-height: 50px;
+}
+
+
+/* 实现导航栏布局 */
+
+.head>.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+}
+
+
+/* 微调各个items */
+
+.logo {
+    margin-left: 15px;
+}
+
+.head>.top-navbar>.nav {
+    margin-right: 155px;
+}
+
+
+/* 开始写样式 */
+
+.head>.top-navbar>.nav>ul>li>a {
+    font-size: 13px;
+    color: #cbcacb;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    display: block;
+    padding: 13px 0px;
+}
+
+.logo span {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-right: 3px;
+    color: #e8676b;
+}
+
+.logo a {
+    color: #9a9da2;
+    display: block;
+    font-family: fantasy;
+}
+
+
+/* 写鼠标悬停效果--用hover插件 */
+
+
+/* 背景图片 */
+
+.banner {
+    height: 515px;
+    background-image: url(./img/rs-cover.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .mask {
+    height: 515px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* 让背景图片实现预期效果 */
+
+.top-navbar {
+    position: fixed;
+    width: 100%;
+}
+
+
+/* 开始main布局 */
+
+
+/* 
+    第一章节布局:
+    这次是先写完结构,然后从里面往外面一边写样式一边布局!
+   */
+
+
+/* 个人信息的布局 */
+
+main>.section-one ul {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main>.section-one ul span {
+    width: 350px;
+}
+
+main>.section-one ul strong {
+    width: 120px;
+}
+
+main>.section-one ul li {
+    width: 470px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/* 头像布局 */
+
+.top-photo img {
+    width: 295px;
+    height: 342px;
+}
+
+
+/* box-top布局 */
+
+
+/* 直接给box一个宽度 */
+
+.section-one .box {
+    width: 930px;
+    background-color: white;
+}
+
+.section-one .box-top {
+    width: 930px;
+    height: 445px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* box-bottom布局 */
+
+.section-one .box-bottom {
+    background: #e8676b;
+}
+
+.section-one .box-bottom>.bottom-nav {
+    width: 930px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-one .box-bottom>.bottom-nav ul {
+    width: 460px;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* 第一节整体居中 */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 调整图标大小 */
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.section-one .box-bottom>.bottom-nav ul a {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.section-one .box-bottom>.bottom-nav ul a:hover {
+    border-radius: 50%;
+    background-color: #d05c60;
+}
+
+
+/* 写结尾部分 */
+
+.other {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.other .downloadResume-wrapper {
+    width: 280px;
+    height: 60px;
+    border: 1px grey solid;
+    background-color: #efefef;
+    margin-top: 36px;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bolder;
+    background-color: #ffffff;
+    -moz-box-shadow: 0px 4px 9px #333333;
+    -webkit-box-shadow: 0px 4px 9px #333333;
+    box-shadow: 0px 4px 9px #333333;
+}
+
+.other .downloadResume-wrapper a {
+    color: black;
+}
+
+.selfIntroduction {
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+/* 开始第二章节--skills  */
+
+
+/* 首先调整两个章节,满足布局需求 */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main .skills {
+    margin-top: 80px;
+}
+
+main .skills h1,
+main .demo-swipe h1 {
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+
+/* 写技能条 */
+
+.outer {
+    width: 400px;
+    height: 5px;
+    background: #fae1e1;
+    border-radius: 50px;
+}
+
+.inner {
+    width: 400px;
+    height: 5px;
+    background: red;
+    border-radius: 50px;
+}
+
+
+/* 写小卡片 */
+
+.box-wrap {
+    width: 930px;
+    height: 245px;
+    border: 1px transparent solid;
+    background-color: #ffffff;
+    -moz-box-shadow: 0px 4px 9px #333333;
+    -webkit-box-shadow: 0px 4px 9px #333333;
+    box-shadow: 0px 4px 9px #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 开始布局skills */
+
+.box-wrap li {
+    width: 400px;
+    height: 25px;
+}
+
+.box-wrap ul {
+    height: 160px;
+    width: 835px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*开始写swipe  */
+
+.demo-swipe>.swipe-wrap> {
+    width: 900px;
+    height: 500px;
+}
+
+.skills .box-wrap {
+    margin-top: 30px;
+}
